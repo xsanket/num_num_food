@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  background-color: #f7f7f7;
+}
+.ant-form-item .ant-form-item-label > label {
+  color: white ;
+}
+
+.ant-form.black-text-form .ant-form-item .ant-form-item-label > label {
+  color: black;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #333333;
+}
+
+button {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+input, textarea {
+  border-radius: 10px;
+}
+
+.form-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.TbLogout2 {
+  font-size: 50px;
+}
+
+.cancel-order-modal .ant-modal-content {
+  border: 2px solid #ff4d4f; 
+}
+
+.ant-layout {
+  height: calc(100vh - 64px);
+}
+
+.test-order-modal .ant-modal {
+  position: fixed;
+  top: 100px; /* Adjust the top position as needed */
+  left: 0;
+  width: 400px; /* Adjust the width as needed */
+  height: calc(100vh - 100px); /* Adjust the height as needed */
+  padding: 20px;
+  overflow-y: auto;
+}
