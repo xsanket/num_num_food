@@ -109,12 +109,6 @@ const RestProfile = () => {
   const [orders, setOrders] = useState([]);
 
 
-
-
-
-
-
-
   const [socket, setSocket] = useState(null);
   const showNotification = (newOrder) => {
     const { dishName, totalPrice, quantity } = newOrder;
@@ -133,6 +127,9 @@ const RestProfile = () => {
     setLiveOrderCount((prevCount) => prevCount - 1);
 
   };
+
+
+
 
   useEffect(() => {
     const newSocket = io('wss://lumpy-bead-lip.glitch.com.me/');
@@ -161,6 +158,7 @@ const RestProfile = () => {
       try {
         const response = await getOrder(`?email=${restaurant?.email}`);
         setLiveOrderCount(response.data.length);
+        console.log("response is ===?>>>>>", response)
       } catch (error) {
         console.error('Error fetching live order count:', error);
       }

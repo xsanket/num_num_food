@@ -15,8 +15,11 @@ import { Server as SocketIOServer } from 'socket.io';
 dotenv.config();
 
 const app = express();
-const server = http.createServer(app);
+const server = 'wss://lumpy-bead-lip.glitch.com.me/';
 const io = new SocketIOServer(server, {
+ headers :{
+  "user-agent" : "Google Chrome"
+ },
   cors: {
     // web socket is deployed on glitch server 
     origin: 'wss://lumpy-bead-lip.glitch.com.me/',
