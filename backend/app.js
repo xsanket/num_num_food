@@ -18,7 +18,9 @@ const app = express();
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    // websocket server is running on glitch.com so the origin would be
+    //origin: 'http://localhost:3000',
+    origin: 'wss://lumpy-bead-lip.glitch.com.me/',
     allowedHeaders: ['content-type'],
   },
 });
@@ -49,7 +51,7 @@ app.use('/api', completedOrders);
 
 
 
-//deployment config
+
 // deployment config
 import path from 'path';
 
