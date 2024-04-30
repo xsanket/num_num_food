@@ -18,8 +18,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
-    // websocket server is running on glitch.com so the origin would be
-    //origin: 'http://localhost:3000',
+    // web socket is deployed on glitch server 
     origin: 'wss://lumpy-bead-lip.glitch.com.me/',
     allowedHeaders: ['content-type'],
   },
