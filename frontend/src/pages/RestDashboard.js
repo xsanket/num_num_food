@@ -135,7 +135,7 @@ const RestProfile = () => {
   };
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('wss://lumpy-bead-lip.glitch.com.me/');
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
