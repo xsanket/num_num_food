@@ -132,7 +132,7 @@ const RestProfile = () => {
 
 
   useEffect(() => {
-    const newSocket = io('wss://lumpy-bead-lip.glitch.com.me/');
+    const newSocket = io('https://lumpy-bead-lip.glitch.me');
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
