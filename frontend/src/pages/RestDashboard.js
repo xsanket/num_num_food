@@ -24,7 +24,7 @@ import TestOrderForm from '../components/TestOrderForm.js';
 const { Header, Content, Sider } = Layout;
 const { TabPane } = Tabs;
 
-const IMAGE_URL = 'http://localhost:5000/uploads/';
+const IMAGE_URL = 'https://num-num-food.onrender.com/uploads/';
 
 
 const RestProfile = () => {
@@ -51,7 +51,7 @@ const RestProfile = () => {
           setImagePath(`${IMAGE_URL}${restaurantData.data.profilePicture}`);
           setRestaurant(restaurantData.data);
           const response = await getOrder(restaurantData.data.email);
-          //console.log("wow-----------",`?email=${restaurantData.data.email}`)
+          console.log("wow-----------",`?email=${restaurantData.data.email}`)
           setLiveOrderCount(response.data.length);
           //console.log("set live order count is =================", response.data.length)  
           // handleOrderCountChange(6);
@@ -119,8 +119,8 @@ const RestProfile = () => {
     );
 
     setOrders([newOrder, ...orders]);
-    handleOrderCountChange(1);
-    // setLiveOrderCount((prevCount) => prevCount + 1);
+    //handleOrderCountChange(1);
+    setLiveOrderCount((prevCount) => prevCount + 1);
   };
 
   const handleOrderAccept = () => {
@@ -165,7 +165,7 @@ const RestProfile = () => {
     };
 
     fetchLiveOrderCount();
-  }, [restaurant?.email]);
+  }, []);
 
   const handleOrderCountChange = (change) => {
     setLiveOrderCount((prevCount) => prevCount + change);
