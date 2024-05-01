@@ -51,7 +51,7 @@ const RestProfile = () => {
           setImagePath(`${IMAGE_URL}${restaurantData.data.profilePicture}`);
           setRestaurant(restaurantData.data);
           const response = await getOrder(restaurantData.data.email);
-          console.log("wow-----------",`?email=${restaurantData.data.email}`)
+          console.log("wow-----------", `?email=${restaurantData.data.email}`)
           setLiveOrderCount(response.data.length);
           //console.log("set live order count is =================", response.data.length)  
           // handleOrderCountChange(6);
@@ -130,9 +130,8 @@ const RestProfile = () => {
 
 
 
-
+  const newSocket = io('https://lumpy-bead-lip.glitch.me');
   useEffect(() => {
-    const newSocket = io('https://lumpy-bead-lip.glitch.me');
     setSocket(newSocket);
 
     newSocket.on('connect', () => {

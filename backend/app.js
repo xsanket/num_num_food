@@ -22,7 +22,8 @@ const io = new SocketIOServer(server, {
  },
   cors: {
     // web socket is deployed on glitch server 
-    origin: 'https://num-num-food.onrender.com',
+    origin: 'https://lumpy-bead-lip.glitch.me/',
+    methods: ['GET', 'POST'],
     allowedHeaders: ['content-type'],
   },
 });
